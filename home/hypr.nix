@@ -163,9 +163,9 @@
       "SUPER, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 10%+  "
 
       # Control brightness
-      "     , XF86MonBrightnessDown, exec, brillo -u  40000 -q -U 1"
+      "     , XF86MonBrightnessDown, exec, brillo -u  40000 -q -U 1           "
       "SUPER, XF86MonBrightnessDown, exec, brillo -u 200000    -S $(brillo -c)" # set to min
-      "     , XF86MonBrightnessUp  , exec, brillo -u  40000 -q -A 1"
+      "     , XF86MonBrightnessUp  , exec, brillo -u  40000 -q -A 1           "
       "SUPER, XF86MonBrightnessUp  , exec, brillo -u 200000    -S $(brillo -m)" # set to max
     ];
 

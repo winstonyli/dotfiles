@@ -14,7 +14,6 @@
     hyfetch
     krabby
     lutris
-    # (microsoft-edge-dev.override { commandLineArgs = "--enable-wayland-ime --gtk-version=4 --enable-features=VaapiVideoDecoder,VaapiVideoEncoder --disable-features=UseChromeOSDirectVideoDecoder --use-gl=egl"; })
     mission-center
     (prismlauncher.override {
       inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher-unwrapped;
@@ -25,9 +24,9 @@
     inputs.thorium.packages.${pkgs.system}.default
     tor-browser
     vscode
-    # inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
-    # wine-wayland
-    # winetricks
+    inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
+    wine-wayland
+    winetricks
     xorg.xeyes
   ];
 
