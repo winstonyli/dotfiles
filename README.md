@@ -1,6 +1,5 @@
 TODO:
 
-- fcitx5
-- keep wifi thru suspend
-- master layout
-- secure boot
+- autoreconnect wifi
+- learn about master layout
+- do something with the sway config, idk

@@ -16,7 +16,8 @@
     lutris
     # (microsoft-edge-dev.override { commandLineArgs = "--enable-wayland-ime --gtk-version=4 --enable-features=VaapiVideoDecoder,VaapiVideoEncoder --disable-features=UseChromeOSDirectVideoDecoder --use-gl=egl"; })
     mission-center
-    (inputs.prismlauncher.packages.${pkgs.system}.default.override {
+    (prismlauncher.override {
+      inherit (inputs.prismlauncher.packages.${pkgs.system}) prismlauncher-unwrapped;
       jdk8 = temurin-bin-8;
       jdk17 = graalvm-ce;
       withWaylandGLFW = true;
