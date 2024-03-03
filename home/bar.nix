@@ -62,7 +62,6 @@
       };
 
       "hyprland/workspaces" = {
-        # format = "{id} {windows}"; TODO: setup rewrite rules for this
         show-special = true;
       };
 

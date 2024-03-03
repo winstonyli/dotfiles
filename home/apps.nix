@@ -8,9 +8,6 @@
     armcord
     blender
     cinny-desktop
-    darling
-    darling-dmg
-    epiphany
     ffmpeg
     github-desktop
     heroic
@@ -20,9 +17,10 @@
     # (microsoft-edge-dev.override { commandLineArgs = "--enable-wayland-ime --gtk-version=4 --enable-features=VaapiVideoDecoder,VaapiVideoEncoder --disable-features=UseChromeOSDirectVideoDecoder --use-gl=egl"; })
     mission-center
     (inputs.prismlauncher.packages.${pkgs.system}.default.override {
+      jdk8 = temurin-bin-8;
       jdk17 = graalvm-ce;
+      withWaylandGLFW = true;
     })
-    temurin-bin-8
     inputs.thorium.packages.${pkgs.system}.default
     tor-browser
     vscode
@@ -31,19 +29,6 @@
     # winetricks
     xorg.xeyes
   ];
-
-  # programs.firefox = {
-  #   enable = true;
-  #   package = pkgs.firefox-devedition;
-
-  #   profiles.dev-edition-default = {
-  #     userChrome = ''
-  #       #TabsToolbar, #sidebar-header {
-  #         visibility: collapse
-  #       }
-  #     '';
-  #   };
-  # };
 
   # App launcher
   programs.fuzzel.enable = true;

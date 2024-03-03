@@ -15,9 +15,7 @@
 
     blacklistedKernelModules = [ "bluetooth" "btusb" ];
 
-    kernelParams = [
-      "amdgpu.sg_display=0"
-    ];
+    kernelParams = [ "amdgpu.sg_display=0" ];
 
     # Secure boot
     bootspec.enable = true;

@@ -19,7 +19,6 @@
     nix-output-monitor
     nixd
     nixpkgs-fmt
-    nodePackages.node-pre-gyp
     psmisc
     python3
     ripgrep
@@ -134,17 +133,4 @@
       krabby random
     '';
   };
-
-  # Rust config
-  # home.file.".cargo/config.toml".text = ''
-  #   [unstable]
-  #   codegen-backend = true
-
-  #   [profile.dev]
-  #   codegen-backend = "cranelift"
-
-  #   #[target.x86_64-unknown-linux-gnu]
-  #   #linker = "clang"
-  #   #rustflags = ["-C", "link-arg=--ld-path=${pkgs.mold}/bin/mold"]
-  # '';
 }
