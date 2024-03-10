@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +18,6 @@
     };
     hyprpaper.url = "github:hyprwm/hyprpaper";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     prismlauncher = {
       url = "github:LemonShaped/PrismLauncher-FTB";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -12,10 +12,8 @@
   ########
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-
-    blacklistedKernelModules = [ "bluetooth" "btusb" ];
-
     kernelParams = [ "amdgpu.sg_display=0" ];
+    blacklistedKernelModules = [ "bluetooth" "btusb" ];
 
     # Secure boot
     bootspec.enable = true;

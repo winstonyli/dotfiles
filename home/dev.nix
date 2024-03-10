@@ -6,7 +6,6 @@
 {
   home.packages = with pkgs; [
     bat
-    black
     bun
     cargo-bloat
     cargo-edit
@@ -22,6 +21,7 @@
     psmisc
     python3
     ripgrep
+    ruff
     (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
       extensions = [
         "clippy"

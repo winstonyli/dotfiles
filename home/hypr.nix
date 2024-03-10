@@ -60,9 +60,7 @@
 
     input = {
       repeat_delay = 300;
-
       sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-
       touchpad = {
         disable_while_typing = true;
         natural_scroll = true;
