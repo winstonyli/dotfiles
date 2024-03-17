@@ -56,6 +56,7 @@
       "x-scheme-handler/about" = "thorium-browser.desktop";
       "x-scheme-handler/mailto" = "thorium-browser.desktop";
       "x-scheme-handler/unknown" = "thorium-browser.desktop";
+      "inode/directory" = "thunar.desktop";
     };
   };
 }
