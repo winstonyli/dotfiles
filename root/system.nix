@@ -43,32 +43,35 @@
   ######################
   hardware.framework.amd-7040.preventWakeOnAC = true;
 
-  services.fwupd.enable = true; # Tool to update Framework firmware
-  # we need fwupd 1.9.7 to downgrade the fingerprint sensor firmware
-  services.fwupd.package = (import
-    (builtins.fetchTarball {
-      url = "https://github.com/NixOS/nixpkgs/archive/bb2009ca185d97813e75736c2b8d1d8bb81bde05.tar.gz";
-      sha256 = "sha256:003qcrsq5g5lggfrpq31gcvj82lb065xvr7bpfa8ddsw8x4dnysk";
-    })
-    {
-      inherit (pkgs) system;
-    }).fwupd;
+  # Tool to update Framework firmware
+  services.fwupd = {
+    enable = true;
 
-  hardware.opengl.enable = true; # RADV drivers
-  hardware.opengl.extraPackages = with pkgs; [
-    libva
-    vaapiVdpau
-    libvdpau-va-gl
-  ];
-  hardware.opengl.extraPackages32 = with pkgs; [
-    vaapiVdpau
-    libvdpau-va-gl
-  ];
+    # Need fwupd 1.9.7 to downgrade fingerprint sensor firmware
+    package = (import
+      (builtins.fetchTarball {
+        url = "https://github.com/NixOS/nixpkgs/archive/bb2009ca185d97813e75736c2b8d1d8bb81bde05.tar.gz";
+        sha256 = "sha256:003qcrsq5g5lggfrpq31gcvj82lb065xvr7bpfa8ddsw8x4dnysk";
+      })
+      {
+        inherit (pkgs) system;
+      }).fwupd;
+  };
+
+  hardware.opengl = {
+    enable = true; # RADV drivers
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd
+      libvdpau-va-gl
+      vaapiVdpau
+    ];
+  };
   hardware.amdgpu.opencl = true;
 
   ##########
   # LOCALE #
   ##########
+  time.hardwareClockInLocalTime = true;
   time.timeZone = "America/Los_Angeles";
 
   i18n = let locale = "en_US.UTF-8"; in {
