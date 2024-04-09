@@ -18,8 +18,6 @@
     nix-output-monitor
     nixd
     nixpkgs-fmt
-    openssl
-    pkg-config
     psmisc
     python3
     ripgrep

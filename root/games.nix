@@ -14,4 +14,6 @@
     dedicatedServer.openFirewall = true; # Firewall ports for Source Dedicated Server
     gamescopeSession.enable = true;
   };
+
+  virtualisation.waydroid.enable = true;
 }
