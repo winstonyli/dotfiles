@@ -6,8 +6,10 @@
 {
   home.packages = with pkgs; [
     armcord
+    aseprite
     blender
     cinny-desktop
+    cloudflare-warp
     ffmpeg
     github-desktop
     heroic
