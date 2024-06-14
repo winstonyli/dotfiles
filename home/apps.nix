@@ -10,6 +10,7 @@
     blender
     cinny-desktop
     cloudflare-warp
+    feh
     ffmpeg
     github-desktop
     heroic
