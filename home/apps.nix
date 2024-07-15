@@ -8,6 +8,7 @@
     armcord
     aseprite
     blender
+    bottles
     cinny-desktop
     cloudflare-warp
     feh
@@ -24,6 +25,8 @@
       jdk17 = graalvm-ce;
       withWaylandGLFW = true;
     })
+    rar
+    rarcrack
     inputs.thorium.packages.${pkgs.system}.default
     tor-browser
     vscode
