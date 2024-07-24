@@ -60,6 +60,7 @@
   # Git
   programs.git = {
     enable = true;
+    lfs.enable = true;
 
     userName = "Winston Li";
     userEmail = "wli24.personal@gmail.com";
