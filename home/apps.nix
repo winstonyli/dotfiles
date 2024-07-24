@@ -14,6 +14,7 @@
     feh
     ffmpeg
     github-desktop
+    grapejuice
     heroic
     hyfetch
     krabby
