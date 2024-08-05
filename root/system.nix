@@ -41,7 +41,7 @@
   ######################
   # FRAMEWORK/HARDWARE #
   ######################
-  hardware.framework.amd-7040.preventWakeOnAC = true;
+  # hardware.framework.amd-7040.preventWakeOnAC = true;
 
   # Tool to update Framework firmware
   services.fwupd = {
