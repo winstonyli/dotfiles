@@ -35,6 +35,7 @@
     wine-wayland
     winetricks
     xorg.xeyes
+    zoom-us
   ];
 
   # App launcher
