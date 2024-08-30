@@ -23,7 +23,7 @@
       "fcitx5 -dr"
     ];
 
-    monitor = [ ",preferred,auto,1" ];
+    monitor = [ ",preferred,auto,1.175" ];
 
     general = {
       border_size = 1;

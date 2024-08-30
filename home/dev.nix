@@ -130,8 +130,10 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
+
     initExtra = ''
       krabby random
+      nix develop -c zsh
     '';
   };
 }
