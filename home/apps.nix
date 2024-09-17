@@ -13,6 +13,7 @@
     cloudflare-warp
     feh
     ffmpeg
+    gimp
     github-desktop
     grapejuice
     heroic
@@ -30,11 +31,13 @@
     rarcrack
     inputs.thorium.packages.${pkgs.system}.default
     tor-browser
+    unzip
     vscode
     inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
     wine-wayland
     winetricks
     xorg.xeyes
+    zip
     zoom-us
   ];
 

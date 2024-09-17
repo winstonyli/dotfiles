@@ -3,9 +3,9 @@
 {
   imports = [ inputs.hyprland.homeManagerModules.default ];
 
-  home.packages = [
-    inputs.hyprpaper.packages.${pkgs.system}.default
+  home.packages = with pkgs; [
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    inputs.hyprpaper.packages.${pkgs.system}.default
   ];
 
   xdg.configFile."hypr/wallpaper.webp".source = config.stylix.image;
@@ -97,12 +97,10 @@
       "SUPER      , Tab, alterzorder, top  "
 
       # Convenience keybinds
-      "SUPER      , R, exec          , hyprctl reload           "
-      "SUPER      , F, fullscreen    , 0                        "
-      "SUPER SHIFT, F, fakefullscreen, 0                        "
-      "SUPER      , S, exec          , grimblast copysave area  "
-      "SUPER SHIFT, S, exec          , grimblast copysave active"
-      "SUPER CTRL , S, exec          , grimblast copysave screen"
+      "SUPER      , R, exec          , hyprctl reload                  "
+      "SUPER      , F, fullscreen    , 0                               "
+      "SUPER SHIFT, F, fakefullscreen, 0                               "
+      "SUPER      , S, exec          , grimblast copysave area --freeze"
 
       # Launch applications
       "SUPER, Return, exec, foot  "
