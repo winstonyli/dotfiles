@@ -133,7 +133,7 @@
 
     initExtra = ''
       krabby random
-      nix develop -c zsh
+      nix develop
     '';
   };
 }
