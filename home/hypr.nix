@@ -100,7 +100,7 @@
       "SUPER      , R, exec          , hyprctl reload                  "
       "SUPER      , F, fullscreen    , 0                               "
       "SUPER SHIFT, F, fakefullscreen, 0                               "
-      "SUPER      , S, exec          , grimblast copysave area --freeze"
+      "SUPER      , S, exec          , grimblast --freeze copysave area"
 
       # Launch applications
       "SUPER, Return, exec, foot  "

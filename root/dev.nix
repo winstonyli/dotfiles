@@ -22,4 +22,5 @@
   # MISC #
   ########
   services.gnome.gnome-keyring.enable = true;
+  virtualisation.docker.enable = true;
 }
