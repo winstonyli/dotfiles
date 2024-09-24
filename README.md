@@ -1,5 +1,18 @@
-TODO:
+# Welcome to my flaky NixOS dotfiles!
 
-- autoreconnect wifi
-- learn about master layout
-- do something with the sway config, idk
+> [!NOTE]
+> This isn't really intended to be directly used by anyone else, but feel free to yoink/take inspiration from certain parts!
+
+| ------------- | ----------------- |
+| **Shell:**    | zsh               |
+| **WM:**       | hyprland + waybar |
+| **Editor:**   | vscode            |
+| **Terminal:** | foot              |
+| **Launcher:** | fuzzel            |
+| **Browser:**  | thorium           |
+
+## TODO:
+
+- [ ] Get WSL working
+- [ ] Add proper notifications
+- [ ] Enable Cloudflare WARP
