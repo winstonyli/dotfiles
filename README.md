@@ -3,9 +3,9 @@
 > [!NOTE]
 > This isn't really intended to be directly used by anyone else, but feel free to yoink/take inspiration from certain parts!
 
+| **WM:**       | hyprland + waybar |
 | ------------- | ----------------- |
 | **Shell:**    | zsh               |
-| **WM:**       | hyprland + waybar |
 | **Editor:**   | vscode            |
 | **Terminal:** | foot              |
 | **Launcher:** | fuzzel            |
