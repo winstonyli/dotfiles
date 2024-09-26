@@ -30,8 +30,6 @@
   };
 
   networking = {
-    hostName = "wli-framework";
-
     networkmanager.enable = true;
 
     firewall.allowedTCPPorts = [ 25565 ];

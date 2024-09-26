@@ -55,19 +55,4 @@
     enable = true;
     provider = "geoclue2";
   };
-
-  # Default apps
-  xdg.mimeApps = {
-    enable = true;
-
-    defaultApplications = {
-      "text/html" = "thorium-browser.desktop";
-      "x-scheme-handler/http" = "thorium-browser.desktop";
-      "x-scheme-handler/https" = "thorium-browser.desktop";
-      "x-scheme-handler/about" = "thorium-browser.desktop";
-      "x-scheme-handler/mailto" = "thorium-browser.desktop";
-      "x-scheme-handler/unknown" = "thorium-browser.desktop";
-      "inode/directory" = "thunar.desktop";
-    };
-  };
 }
