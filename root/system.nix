@@ -15,15 +15,6 @@
     kernelParams = [ "amdgpu.sg_display=0" ];
     blacklistedKernelModules = [ "bluetooth" "btusb" ];
 
-    # Secure boot
-    bootspec.enable = true;
-
-    loader.systemd-boot.enable = pkgs.lib.mkForce false;
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/etc/secureboot";
-    };
-
     loader.efi.canTouchEfiVariables = true;
 
     tmp.useTmpfs = true;

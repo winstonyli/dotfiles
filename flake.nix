@@ -58,6 +58,7 @@
             home-manager.extraSpecialArgs = specialArgs;
             home-manager.users.wli = import ./home;
 
+            # Misc. WSL-specific settings
             programs.nix-ld.enable = true;
 
             wsl = {
@@ -88,6 +89,15 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = specialArgs;
             home-manager.users.wli = import ./home;
+
+            # Secure boot
+            bootspec.enable = true;
+
+            loader.systemd-boot.enable = nixpkgs.lib.mkForce false;
+            lanzaboote = {
+              enable = true;
+              pkiBundle = "/etc/secureboot";
+            };
           }
         ];
       };
