@@ -47,6 +47,7 @@
         modules = [
           inputs.nixos-wsl.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
+          inputs.stylix.nixosModules.stylix
           ./modules/shared
           ./modules/biblichor
         ];
