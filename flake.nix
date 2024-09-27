@@ -41,32 +41,14 @@
   outputs = { nixpkgs, ... }@inputs: {
     nixosConfigurations = {
       # NixOS on WSL
-      biblichor = nixpkgs.lib.nixosSystem rec {
+      biblichor = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           inputs.nixos-wsl.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
-
-          ./root
-
-          {
-            networking.hostName = "wli-biblichor";
-
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = specialArgs;
-            home-manager.users.wli = import ./home;
-
-            # Misc. WSL-specific settings
-            programs.nix-ld.enable = true;
-
-            wsl = {
-              enable = true;
-              defaultUser = "wli";
-              startMenuLaunchers = true;
-            };
-          }
+          ./modules/shared
+          ./modules/biblichor
         ];
       };
 
@@ -79,26 +61,8 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.lanzaboote.nixosModules.lanzaboote
           inputs.stylix.nixosModules.stylix
-
-          ./root
-
-          {
-            networking.hostName = "wli-theseus";
-
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = specialArgs;
-            home-manager.users.wli = import ./home;
-
-            # Secure boot
-            bootspec.enable = true;
-
-            loader.systemd-boot.enable = nixpkgs.lib.mkForce false;
-            lanzaboote = {
-              enable = true;
-              pkiBundle = "/etc/secureboot";
-            };
-          }
+          ./modules/shared
+          ./modules/theseus
         ];
       };
     };

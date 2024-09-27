@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   i18n.inputMethod = {

@@ -1,20 +1,6 @@
 { inputs, pkgs, ... }:
 
 {
-  imports = [
-    ../hardware-configuration.nix
-
-    ./desktop.nix
-    ./dev.nix
-    ./fcitx.nix
-    ./games.nix
-    ./greetd.nix
-    ./power.nix
-    ./style.nix
-    ./system.nix
-    ./users.nix
-  ];
-
   nixpkgs.config.allowUnfree = true;
 
   nix.settings = {
@@ -34,8 +20,4 @@
     dates = "weekly";
   };
   nix.optimise.automatic = true;
-
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11";
 }
