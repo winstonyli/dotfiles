@@ -1,5 +1,7 @@
 {
-  imports = [ ];
+  imports = [ 
+    ./hardware.nix
+  ];
 
   networking.hostName = "wli-biblichor";
   system.stateVersion = "24.05";
