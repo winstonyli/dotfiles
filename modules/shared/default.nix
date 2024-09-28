@@ -1,7 +1,5 @@
 {
   imports = [
-    ../../hardware-configuration.nix
-
     ./desktop.nix
     ./dev.nix
     ./env.nix
