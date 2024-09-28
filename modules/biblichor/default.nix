@@ -10,4 +10,6 @@
     defaultUser = "wli";
     startMenuLaunchers = true;
   };
+
+  networking.networkmanager.wifi.macAddress = "16:ac:60:46:a3:07";
 }
