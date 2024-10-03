@@ -10,15 +10,11 @@
     blender
     bottles
     cinny-desktop
-    cloudflare-warp
-    feh
-    ffmpeg
     gimp
     github-desktop
     grapejuice
     heroic
     hyfetch
-    krabby
     lutris
     mission-center
     (prismlauncher.override {
@@ -27,17 +23,13 @@
       jdk17 = graalvm-ce;
       withWaylandGLFW = true;
     })
-    rar
-    rarcrack
     inputs.thorium.packages.${pkgs.system}.default
     tor-browser
-    unzip
     vscode
     inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
     wine-wayland
     winetricks
     xorg.xeyes
-    zip
     zoom-us
   ];
 

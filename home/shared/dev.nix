@@ -67,7 +67,7 @@
 
     extraConfig = {
       init.defaultBranch = "main";
-      github.user = "wli24";
+      github.user = "winstonyli";
       push.autoSetupRemote = true;
     };
   };
@@ -130,9 +130,8 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
-
     initExtra = ''
-      krabby random
+      ${pkgs.krabby}/bin/krabby random
       nix develop
     '';
   };

@@ -36,6 +36,10 @@
     };
     stylix.url = "github:danth/stylix";
     thorium.url = "github:almahdi/nix-thorium";
+    vscode-server = {
+      url = "github:nix-community/nixos-vscode-server";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, ... }@inputs: {
@@ -46,10 +50,14 @@
         specialArgs = { inherit inputs; };
         modules = [
           inputs.nixos-wsl.nixosModules.default
+          inputs.vscode-server.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
           ./modules/shared
           ./modules/biblichor
+          {
+            home-manager.users.wli = import ./home/biblichor;
+          }
         ];
       };
 
@@ -59,11 +67,14 @@
         specialArgs = { inherit inputs; };
         modules = [
           inputs.nixos-hardware.nixosModules.framework-13-7040-amd
-          inputs.home-manager.nixosModules.home-manager
           inputs.lanzaboote.nixosModules.lanzaboote
+          inputs.home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
           ./modules/shared
           ./modules/theseus
+          {
+            home-manager.users.wli = import ./home/theseus;
+          }
         ];
       };
     };
