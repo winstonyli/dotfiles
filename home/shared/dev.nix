@@ -139,7 +139,6 @@
 
     initExtra = ''
       ${pkgs.krabby}/bin/krabby random
-      nix develop
     '';
   };
 }
