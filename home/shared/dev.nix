@@ -78,6 +78,7 @@
       init.defaultBranch = "main";
       github.user = "winstonyli";
       push.autoSetupRemote = true;
+      core.autocrlf = "input";
     };
   };
 
