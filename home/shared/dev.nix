@@ -40,6 +40,13 @@
     stack
   ];
 
+  # Direnv
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   # Terminal emulator
   programs.foot = {
     enable = true;
