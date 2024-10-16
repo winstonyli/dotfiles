@@ -12,6 +12,7 @@
     cargo-udeps
     clang-tools
     cmake
+    deno
     gcc
     man-pages
     man-pages-posix
